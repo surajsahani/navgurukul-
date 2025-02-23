@@ -221,6 +221,21 @@ function App() {
         </div>
       </section>
 
+      {/* Lead Organizer Section */}
+      <section id="organizer" className="min-h-screen flex items-center bg-gray-100 py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-5xl font-bold mb-12">Lead Organizer</h2>
+          <div className="flex flex-col lg:flex-row items-center lg:space-x-12">
+            <img src="https://martialcoder.com/photos/bg.png" alt="Suraj Sahani" className="w-48 h-48 rounded-full mb-6 lg:mb-0" />
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Suraj Sahani</h3>
+              <p className="text-xl text-gray-600 mb-4">Suraj is the lead organizer of Developathon 2024. With a passion for technology and innovation, he is dedicated to creating an inclusive environment for developers to thrive and build groundbreaking applications.</p>
+              <p className="text-xl text-gray-600">Reach out to Suraj for any queries or assistance related to the event.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-white border-t py-12">
         <div className="max-w-7xl mx-auto px-6 text-center">
