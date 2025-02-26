@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, ExternalLink, Clock } from 'lucide-react';
+import ReactConfetti from 'react-confetti';
 
 function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState({
@@ -8,6 +9,23 @@ function CountdownTimer() {
     minutes: 0,
     seconds: 0
   });
+  const [isCompleted, setIsCompleted] = useState(false);
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const endDate = new Date('March 1, 2025 23:59:59 GMT+0530');
@@ -18,6 +36,8 @@ function CountdownTimer() {
 
       if (difference <= 0) {
         clearInterval(timer);
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        setIsCompleted(true);
         return;
       }
 
@@ -31,6 +51,24 @@ function CountdownTimer() {
 
     return () => clearInterval(timer);
   }, []);
+
+  if (isCompleted) {
+    return (
+      <>
+        <ReactConfetti
+          width={windowSize.width}
+          height={windowSize.height}
+          numberOfPieces={200}
+          recycle={false}
+          style={{ position: 'fixed', top: 0, left: 0, zIndex: 1000 }}
+        />
+        <div className="bg-green-600 text-white p-6 rounded-lg text-center animate-bounce">
+          <div className="text-3xl font-bold mb-2">🎉 Hackathon Completed! 🎉</div>
+          <div className="text-lg">Thank you for participating!</div>
+        </div>
+      </>
+    );
+  }
 
   return (
     <div className="flex items-center justify-center space-x-4 text-center">
