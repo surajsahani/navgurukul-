@@ -299,7 +299,7 @@ function App() {
         <h3 className="text-2xl font-bold">Ujala</h3>
       </div>
       <div>
-        <img src="https://via.placeholder.com/150" alt="Aadarsh" className="w-48 h-48 rounded-full mx-auto mb-4" />
+        <img src="https://s3.ap-south-1.amazonaws.com/chanakya-dev/profileImg/02ca630f-2e41-4bf2-b490-b72cef13a8a7-WhatsApp%20Image%202024-11-14%20at%2018.34.01.jpeg" alt="Aadarsh" className="w-48 h-48 rounded-full mx-auto mb-4" />
         <h3 className="text-2xl font-bold">Aadarsh</h3>
       </div>
     </div>
