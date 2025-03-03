@@ -291,7 +291,7 @@ function App() {
       </div>
       {/* Co-Organizers */}
       <div>
-        <img src="https://via.placeholder.com/150" alt="Swati Kapgate" className="w-48 h-48 rounded-full mx-auto mb-4" />
+        <img src="https://i.postimg.cc/dDPWh0Cb/IMG-20250303-WA0009.jpg" alt="Swati Kapgate" className="w-48 h-48 rounded-full mx-auto mb-4" />
         <h3 className="text-2xl font-bold">Swati Kapgate</h3>
       </div>
       <div>
