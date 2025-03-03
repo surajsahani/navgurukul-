@@ -130,7 +130,7 @@ function App() {
               <span className="block text-orange-400">Innovation</span>
             </h1>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl">
-              Join us at Developathon 2024, where innovation meets simplicity! This hackathon is designed for developers, creators, and visionaries looking to harness the power of AI-driven Low-Code/No-Code solutions.
+              Join us at Developathon 2025, where innovation meets simplicity! This hackathon is designed for developers, creators, and visionaries looking to harness the power of AI-driven Low-Code/No-Code solutions.
             </p>
             <div className="space-y-8">
               <div className="relative inline-block">
