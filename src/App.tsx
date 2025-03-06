@@ -360,7 +360,7 @@ function App() {
             </div>
             <div>
               <img src="https://i.postimg.cc/2S8g0NtP/HXdq59-A-Imgur.png" alt="Description of Image" class="w-48 h-48 rounded-full mx-auto mb-4" />
-              <h3 className="text-2xl font-bold">Image Title</h3>
+              <h3 className="text-2xl font-bold">ujala</h3>
             </div>
             <div>
               <img src="https://s3.ap-south-1.amazonaws.com/chanakya-dev/profileImg/02ca630f-2e41-4bf2-b490-b72cef13a8a7-WhatsApp%20Image%202024-11-14%20at%2018.34.01.jpeg" alt="Aadarsh" className="w-48 h-48 rounded-full mx-auto mb-4" />
