@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, ExternalLink, Clock, Trophy, Users, UserPlus, CheckCircle } from 'lucide-react';
 import ReactConfetti from 'react-confetti';
+import { ArrowTopRightOnSquareIcon, UserGroupIcon, DocumentTextIcon, UserIcon } from '@heroicons/react/24/outline';
 
 
 function CountdownTimer() {
@@ -266,38 +267,99 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Events Section */}
-      <section id="events" className="min-h-screen flex items-center bg-gray-50 py-20">
+      {/* Events Section*/}
+      <section id="events" className="min-h-screen flex items-center bg-gradient-to-b from-gray-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-5xl font-bold mb-12">Events</h2>
+          <p className="text-gray-600 text-lg max-w-2xl">
+            Join our innovative platforms and tools designed to enhance your hackathon experience
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Registration Portal Card */}
             <a
               href="https://dainty-madeleine-46a421.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block p-8 rounded-lg bg-white hover:bg-purple-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+              className="group relative block rounded-xl bg-white hover:bg-purple-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden"
             >
-              <h3 className="font-semibold mb-4 text-xl group-hover:text-white transition-colors">Registration Portal</h3>
-              <p className="text-gray-600 group-hover:text-white/90 transition-colors">Sign up and join the hackathon!</p>
+              <div className="absolute top-4 right-4 text-gray-400 group-hover:text-white/70">
+                <ArrowTopRightOnSquareIcon className="h-6 w-6" />
+              </div>
+              <div className="p-8">
+                <div className="mb-6 inline-block p-3 bg-purple-100 rounded-lg group-hover:bg-white/10">
+                  <UserGroupIcon className="h-8 w-8 text-purple-600 group-hover:text-white" />
+                </div>
+                <h3 className="font-bold mb-3 text-2xl group-hover:text-white transition-colors">
+                  Registration Portal
+                </h3>
+                <p className="text-gray-600 group-hover:text-white/90 transition-colors mb-4">
+                  Sign up and join the hackathon! Get ready to showcase your skills and collaborate with fellow developers.
+                </p>
+                <span className="inline-flex items-center text-purple-600 group-hover:text-white font-medium">
+                  Register Now
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
             </a>
+
+            {/* ATS Resume Score Card */}
             <a
               href="https://navgurukul-ai-resume-builder1.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block p-8 rounded-lg bg-white hover:bg-purple-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+              className="group relative block rounded-xl bg-white hover:bg-purple-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden"
             >
-              <h3 className="font-semibold mb-4 text-xl group-hover:text-white transition-colors">ATS Resume Score</h3>
-              <p className="text-gray-600 group-hover:text-white/90 transition-colors">A platform to analyze and improve resumes.</p>
+              <div className="absolute top-4 right-4 text-gray-400 group-hover:text-white/70">
+                <ArrowTopRightOnSquareIcon className="h-6 w-6" />
+              </div>
+              <div className="p-8">
+                <div className="mb-6 inline-block p-3 bg-purple-100 rounded-lg group-hover:bg-white/10">
+                  <DocumentTextIcon className="h-8 w-8 text-purple-600 group-hover:text-white" />
+                </div>
+                <h3 className="font-bold mb-3 text-2xl group-hover:text-white transition-colors">
+                  ATS Resume Score
+                </h3>
+                <p className="text-gray-600 group-hover:text-white/90 transition-colors mb-4">
+                  Optimize your resume for ATS systems. Get instant feedback and improve your chances of landing interviews.
+                </p>
+                <span className="inline-flex items-center text-purple-600 group-hover:text-white font-medium">
+                  Analyze Resume
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
             </a>
+
+            {/* Peer Interview Platform Card */}
             <a
               href="https://peer-interview-project.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block p-8 rounded-lg bg-white hover:bg-purple-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+              className="group relative block rounded-xl bg-white hover:bg-purple-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden"
             >
-              <h3 className="font-semibold mb-4 text-xl group-hover:text-white transition-colors">Peer Interview Platform</h3>
-              <p className="text-gray-600 group-hover:text-white/90 transition-colors">A collaborative platform for peer interviews.</p>
+              <div className="absolute top-4 right-4 text-gray-400 group-hover:text-white/70">
+                <ArrowTopRightOnSquareIcon className="h-6 w-6" />
+              </div>
+              <div className="p-8">
+                <div className="mb-6 inline-block p-3 bg-purple-100 rounded-lg group-hover:bg-white/10">
+                  <UserIcon className="h-8 w-8 text-purple-600 group-hover:text-white" />
+                </div>
+                <h3 className="font-bold mb-3 text-2xl group-hover:text-white transition-colors">
+                  Peer Interview Platform
+                </h3>
+                <p className="text-gray-600 group-hover:text-white/90 transition-colors mb-4">
+                  Practice interviews with peers, give and receive feedback, and improve your interview skills together.
+                </p>
+                <span className="inline-flex items-center text-purple-600 group-hover:text-white font-medium">
+                  Start Practicing
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
             </a>
           </div>
         </div>
@@ -360,7 +422,7 @@ function App() {
             </div>
             <div>
               <img src="https://i.postimg.cc/2S8g0NtP/HXdq59-A-Imgur.png" alt="Description of Image" class="w-48 h-48 rounded-full mx-auto mb-4" />
-              <h3 className="text-2xl font-bold">ujala</h3>
+              <h3 className="text-2xl font-bold">Ujala</h3>
             </div>
             <div>
               <img src="https://s3.ap-south-1.amazonaws.com/chanakya-dev/profileImg/02ca630f-2e41-4bf2-b490-b72cef13a8a7-WhatsApp%20Image%202024-11-14%20at%2018.34.01.jpeg" alt="Aadarsh" className="w-48 h-48 rounded-full mx-auto mb-4" />
