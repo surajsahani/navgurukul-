@@ -115,22 +115,7 @@ const images = [
     title: "Participants presenting their solutions"
   }
 ];
-const GalleryItem = ({ src, alt, title }: { src: string; alt: string; title: string }) => (
-  <div className="group relative hover-scale">
-    <div className="overflow-hidden rounded-xl shadow-lg">
-      <img
-        src={src}
-        alt={alt}
-        className="w-64 h-64 object-cover transform transition-transform duration-500 group-hover:scale-110"
-      />
-    </div>
-    <div className="mt-4 text-center">
-      <h3 className="text-xl font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">
-        {title}
-      </h3>
-    </div>
-  </div>
-);
+
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -204,14 +189,21 @@ function App() {
 
           {/* Team Winners  abhi data add karna baki hai*/}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {/* First Place */}
             <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-yellow-400 transform hover:-translate-y-1 transition-transform duration-300">
               <div className="flex items-center mb-4">
                 <Trophy className="h-8 w-8 text-yellow-400 mr-3" />
                 <h3 className="text-2xl font-bold">First Place Team</h3>
               </div>
-              <p className="text-xl font-semibold text-purple-600 mb-2">Team name To be announced</p>
-              <p className="text-gray-600">Created an innovative AI-powered learning platform that adapts to individual student needs.</p>
+              <p className="text-xl font-semibold text-purple-600 mb-2">LearnCompete</p>
+              <p className="text-gray-600 mb-4">Organization-Specific Coding Platform.</p>
+              <div className="flex space-x-4">
+                <a href="https://v0-new-project-ya1qxtlyqhg-qiujjd.vercel.app/" target="_blank" className="text-blue-500 font-semibold hover:underline">
+                  Project Link
+                </a>
+                <a href="https://drive.google.com/file/d/1_VdJ0BUV6GkGk2dpsdpBvM1t6tmZKEil/view" target="_blank" className="text-blue-500 font-semibold hover:underline">
+                  Demo Link
+                </a>
+              </div>
             </div>
 
             {/* Second Place */}
@@ -220,15 +212,24 @@ function App() {
                 <Trophy className="h-8 w-8 text-gray-400 mr-3" />
                 <h3 className="text-2xl font-bold">Second Place Team</h3>
               </div>
-              <p className="text-xl font-semibold text-purple-600 mb-2">Team name To be announced</p>
-              <p className="text-gray-600">Developed a revolutionary peer-to-peer skill-sharing marketplace.</p>
+              <p className="text-xl font-semibold text-purple-600 mb-2">DanteServe</p>
+              <p className="text-gray-600 mb-4"> Travel & Food Companion.</p>
+              <div className="flex space-x-4">
+                <a href="https://danteserve.netlify.app/" target="_blank" className="text-blue-500 font-semibold hover:underline">
+                  Project Link
+                </a>
+                <a href="https://drive.google.com/file/d/1bK4ZB_m7SPR_LJ_zCY1jKRBBkmoMzPiQ/view" target="_blank" className="text-blue-500 font-semibold hover:underline">
+                  Demo Link
+                </a>
+              </div>
             </div>
+
           </div>
 
           {/* Individual Winner - Hackathon Hero */}
           <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-purple-400 mb-16">
             <h3 className="text-2xl font-bold mb-4">Hackathon Hero</h3>
-            <p className="text-xl font-semibold text-purple-600 mb-2">[To be announced]</p>
+            <p className="text-xl font-semibold text-purple-600 mb-2">Dhurwa Ravishankar</p>
             <p className="text-gray-600">Recognition for exceptional individual contribution and technical excellence throughout the hackathon.</p>
           </div>
 
@@ -292,13 +293,13 @@ function App() {
                   <h4 className="font-semibold mb-1">Location</h4>
                   <p className="text-gray-600">Dantewada Campus, NavGurukul</p>
                 </div>
-                <div>
+                {/* <div>
                   <h4 className="font-semibold mb-1">Who Can Join?</h4>
                   <p className="text-gray-600">Anyone passionate about technology, AI, and innovation!</p>
-                </div>
+                </div> */}
                 <div>
                   <h4 className="font-semibold mb-1">Result Announcement</h4>
-                  <p className="text-gray-600">Final results will be announced on <span className="font-semibold">7th March 2025</span>.</p>
+                  <p className="text-gray-600"> <span className="font-semibold">7th March 2025</span>.</p>
                 </div>
               </div>
             </div>
