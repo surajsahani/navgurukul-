@@ -93,6 +93,44 @@ function CountdownTimer() {
     </div>
   );
 }
+const images = [
+  {
+    src: "https://i.imgur.com/rrjeKcr.jpg",
+    alt: "nan1",
+    title: "Participants collaborating on their projects"
+  },
+  {
+    src: "https://i.imgur.com/RMcipWp.jpg",
+    alt: "nan2",
+    title: "Team discussions and brainstorming"
+  },
+  {
+    src: "https://i.imgur.com/IdKuc4J.jpg",
+    alt: "nan3",
+    title: "Live coding and development sessions"
+  },
+  {
+    src: "https://i.imgur.com/nCZttRC.png",
+    alt: "nan4",
+    title: "Participants presenting their solutions"
+  }
+];
+const GalleryItem = ({ src, alt, title }: { src: string; alt: string; title: string }) => (
+  <div className="group relative hover-scale">
+    <div className="overflow-hidden rounded-xl shadow-lg">
+      <img
+        src={src}
+        alt={alt}
+        className="w-64 h-64 object-cover transform transition-transform duration-500 group-hover:scale-110"
+      />
+    </div>
+    <div className="mt-4 text-center">
+      <h3 className="text-xl font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">
+        {title}
+      </h3>
+    </div>
+  </div>
+);
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -116,7 +154,7 @@ function App() {
             <a href="#home" className="hover:text-purple-600 font-medium">Home</a>
             <a href="#about" className="hover:text-purple-600 font-medium">About</a>
             <a href="#events" className="hover:text-purple-600 font-medium">Events</a>
-            <a href="#blog" className="hover:text-purple-600 font-medium">Blog</a>
+            <a href="#gallery" className="hover:text-purple-600 font-medium">Gallery</a>
           </div>
         </div>
       </nav>
@@ -365,46 +403,47 @@ function App() {
         </div>
       </section>
 
-      {/* Blog Section */}
-      <section id="blog" className="min-h-screen flex items-center bg-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-5xl font-bold mb-12">Blog</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Why Low-Code/No-Code?</h3>
-              <p className="text-gray-600 mb-4">Discover how AI-powered Low-Code/No-Code solutions are revolutionizing software development.</p>
-              <a href="#" className="text-purple-600 hover:text-purple-700">Read more →</a>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Getting Started with AI</h3>
-              <p className="text-gray-600 mb-4">Learn the basics of AI and how to integrate it into your projects using simple tools.</p>
-              <a href="#" className="text-purple-600 hover:text-purple-700">Read more →</a>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Community Success Stories</h3>
-              <p className="text-gray-600 mb-4">Read about the amazing projects built by our community members.</p>
-              <a href="#" className="text-purple-600 hover:text-purple-700">Read more →</a>
-            </div>
+      <section id="gallery" className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-20 overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-6 mb-16">
+          <h2 className="text-5xl font-bold text-center">
+            Gallery of Innovation
+          </h2>
+          <p className="text-center text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
+            Relive the moments of creativity, collaboration, and breakthroughs from our hackathon journey.
+          </p>
+        </div>
+
+        {/* Scrolling Container */}
+        <div className="relative w-full overflow-hidden py-12 h-[500px]">
+          {/* Left Gradient Overlay */}
+          <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white via-white/80 to-transparent z-20"></div>
+
+          {/* Right Gradient Overlay */}
+          <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white via-white/80 to-transparent z-20"></div>
+
+          {/* Scrolling Content */}
+          <div className="flex animate-infinite-scroll whitespace-nowrap space-x-8 h-full items-center">
+            {[...images, ...images].map((img, index) => (
+              <div key={`${img.alt}-${index}`} className="group relative inline-flex flex-col items-center transform transition-all duration-500 hover:scale-105">
+                <div className="relative overflow-hidden rounded-2xl shadow-xl w-80 h-96">
+                  <div className="relative overflow-hidden rounded-2xl shadow-xl w-80 h-96 flex flex-col justify-end p-4">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-2 text-white bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h5 className="text-sm font-bold">{img.title}</h5>
+                      <p className="text-sm">Team Collaboration • March 2025</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-
-
-
-      {/* Lead Organizer Section
-      <section id="organizer" className="min-h-screen flex items-center bg-gray-100 py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-5xl font-bold mb-12">Lead Organizer</h2>
-          <div className="flex flex-col lg:flex-row items-center lg:space-x-12">
-            <img src="https://martialcoder.com/photos/bg.png" alt="Suraj Sahani" className="w-48 h-48 rounded-full mb-6 lg:mb-0" />
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Suraj Sahani</h3>
-              <p className="text-xl text-gray-600 mb-4">Suraj is the lead organizer of Developathon 2024. With a passion for technology and innovation, he is dedicated to creating an inclusive environment for developers to thrive and build groundbreaking applications.</p>
-              <p className="text-xl text-gray-600">Reach out to Suraj for any queries or assistance related to the event.</p>
-            </div>
-          </div>
-        </div>
-      </section> */}
       {/* Lead & Co-Organizers Section */}
       <section id="organizer" className="min-h-screen flex items-center bg-gray-100 py-20">
         <div className="max-w-7xl mx-auto px-6">
